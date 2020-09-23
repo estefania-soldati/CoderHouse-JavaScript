@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="all"/>
+  <meta name="keywords" Content="">
+  <meta name="description" content="">
+  <meta name="author" content="Estefania Soldati">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>Proyecto final parte 1</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+    <!-- Custom-Scripts -->
+  <script src="./scripts/scripts.js"></script>
+</head>
+<body>
+
+  <main>
+    <section class="hero flex">
+      <div class="overlay"></div>
+      <div class="hero-container">
+        <h1> Cotiza el <span>seguro</span></br> de tu vehículo</h1>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Seguí los siguientes pasos para obtener la cotización de tu auto:</h2> 
+      <div class="about-container">
+        <div class="car-information">
+          <h3>Acerca de tu auto</h3>
+          <label for="marca">Marca</label>
+          <select id="marca" class="marca">
+            <option value="" selected></option>
+            <option value="Alfa-Romeo">Alfa Romeo</option>
+            <option value="Audi">Audi</option>
+            <option value="BMW">BMW</option>
+            <option value="Chery">Chery</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Citroen">Citroen</option>
+            <option value="Daewoo">Daewoo</option>
+            <option value="Daimler-Chrysler">Daimler Chrysler</option>
+            <option value="Fiat">Fiat</option>
+            <option value="Ford">Ford</option>
+            <option value="General-Motors">General Motors</option>
+            <option value="Honda">Honda</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Isuzu">Isuzu</option>
+            <option value="Jaguar">Jaguar</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Kia-Motors">Kia Motors</option>
+            <option value="Land-Rover">Land Rover</option>
+            <option value="Mercedes-Benz">Mercedes Benz</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Nissan">Nissan</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Renault">Renault</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Toyota">Toyota</option>
+            <option value="Volkswagen">Volkswagen</option>
+            <option value="Volvo">Volvo</option>
+          </select>
+         
+          <label for="modelo">Modelo</label>
+          <input type="text" placeholder="" id="modelo"> 
+         
+          <label for="año">Año</label>
+          <input type="text" placeholder="" id="año"> 
+         
+          <label for="puertas">Puertas</label>
+          <select id="puertas" class="puertas">
+            <option value="3">2</option>
+            <option value="4">4</option>
+          </select>
+
+        </div> 
+        
+        <div class="person-information">
+          <h3>Acerca del dueño del auto</h3> 
+          
+          <label for="nombre-apellido">Nombre y apellido</label>
+          <input type="text" placeholder="" id="nombre-apellido"> 
+          
+          <label for="nacimiento">Fecha de nacimiento</label> 
+          <input type="date" name="fecha">
+         
+          <label for="puertas">País de residencia</label>
+            <select id="pais-residencia" class="pais-residencia">
+              <option value="Argentina">Argentina</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Chile">Chile</option>
+              <option value="Uruguay">Uruguay</option>
+            </select>
+          
+          <label for="ciudad">Ciudad</label>
+          <input type="text" placeholder="" id="ciudad">
+          
+          <label for="telefono">Teléfono</label>
+          <input type="text" placeholder="" id="telefono">
+          
+          <label for="mail">Mail</label>
+          <input type="text" placeholder="" id="mail">  
+        
+        </div>
+      </div>
+      <div class="about-send">
+        <button onclick="mostrarMensajeDeAgradecimiento()">cotizar</button>
+      </div>  
+    </section>
+  </main>
+
+</body>
+</html>
