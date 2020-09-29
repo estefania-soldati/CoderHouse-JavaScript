@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="all"/>
+  <meta name="keywords" Content="">
+  <meta name="description" content="">
+  <meta name="author" content="Estefania Soldati">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title>Proyecto final parte 1</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+    <!-- Custom-Scripts -->
+  <script src="./scripts/autos.js"></script>
+  <script src="./scripts/scripts.js"></script>
+</head>
+<body>
+
+  <main>
+    <section class="hero flex">
+      <div class="overlay"></div>
+      <div class="hero-container">
+        <h1> Cotiza el <span>seguro</span></br> de tu vehículo</h1>
+      </div>
+    </section>
+    <section class="about">
+      <h2>Seguí los siguientes pasos para obtener la cotización de tu auto:</h2> 
+      <div class="about-container">
+        <div class="car-information">
+          <h3>Acerca de tu auto</h3>
+          <label for="marca">Marca</label>
+          <select id="marca" class="marca required">
+          </select>
+         
+          <label for="modelo">Modelo</label>
+          <select id="modelo" class="modelo required">
+            <option></option>
+          </select>
+         
+          <label for="anio">Año</label>
+          <select id="anio" class="anio required">
+            <option></option>
+          </select> 
+         
+          <label for="puertas">Puertas</label>
+          <select id="puertas" class="puertas required">
+            <option value="3">2</option>
+            <option value="4">4</option>
+          </select>
+
+        </div> 
+        
+        <div class="person-information">
+          <h3>Acerca del dueño del auto</h3> 
+          
+          <!--<label for="nombre-apellido">Nombre y apellido</label>
+          <input type="text" placeholder="" id="nombre-apellido" class="required"> -->
+          
+          <label for="nacimiento">Fecha de nacimiento</label> 
+          <input type="date" name="fecha" class="required">
+         
+          <label for="puertas">País de residencia</label>
+            <select id="pais-residencia" class="pais-residencia required">
+              <option value="Argentina">Argentina</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Chile">Chile</option>
+              <option value="Uruguay">Uruguay</option>
+            </select>
+          
+          <label for="ciudad">Ciudad</label>
+          <input type="text" placeholder="" id="ciudad" class="required">
+          
+          <label for="telefono">Teléfono</label>
+          <input type="text" placeholder="" id="telefono" class="required">
+          
+          <label for="mail">Mail</label>
+          <input type="text" placeholder="" id="mail" class="required">  
+        
+        </div>
+      </div>
+      <div class="about-send">
+        <button id="myBtn" class="about-button-cotizador">cotizar</button>
+      </div>  
+    </section>
+
+    
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="first-p">Los datos ingresados son:</p>
+        <p>Marca: <span id="marca-modal"></span></p>
+        <p>Modelo: <span id="modelo-modal"></span></p>
+        <p>Año: <span id="year-modal"></span></p>
+        <p>Puertas: <span id="puerta-modal"></span></p>
+        <p>Cotización: <span id="precio-modal"></span></p>
+        <p class="last-p">Muchas gracias <span id="nombre-modal"></span> por cotizar tu auto con nosotros, pronto nos comunicaremos con usted para brindarle mayor información.</p>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
