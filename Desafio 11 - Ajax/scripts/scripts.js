@@ -40,11 +40,17 @@ window.onload = function(){
     const nombreElegido = document.querySelector("#nombre-apellido").value;
     const marcaElegida = document.querySelector("#marca").value;
     const modeloElegido = document.querySelector("#modelo").value;
-    const yearElegido = document.querySelector("#anio").value;
+    const yearElegido = parseInt(document.querySelector("#anio").value);
     const puertasElegidas = document.querySelector("#puertas").value;
+    let precioAuto = document.querySelector("#precio-modal")
     autos.forEach(function(auto){
       if (auto.brand === marcaElegida && auto.model === modeloElegido) {
-        document.querySelector("#precio-modal").innerHTML= auto.precio0km;
+        if (auto.precio0km > 10000000 || yearElegido >= 2010) {
+          precioAuto = "$8000"
+        } else{
+          precioAuto = "$5000"
+        }
+        document.querySelector("#precio-modal").innerHTML= precioAuto;
         document.querySelector("#marca-modal").innerHTML= marcaElegida;  
         document.querySelector("#modelo-modal").innerHTML= modeloElegido;
         document.querySelector("#year-modal").innerHTML= yearElegido;
@@ -54,7 +60,6 @@ window.onload = function(){
     })
   }
   
-
   function mostrarData(){
     ingreseMarca();
     document.querySelector("#marca").addEventListener("change", ingreseModelo);
@@ -67,6 +72,11 @@ window.onload = function(){
     dataType: 'json',
     success: function (data){
       autos = data;
+      console.log(autos)
+      console.log(autos[23].precio0km)
+      console.log(autos[20].precio0km)
+      console.log(autos[8].precio0km)
+      console.log(autos[32].precio0km)
       mostrarData();    
     } 
   })
