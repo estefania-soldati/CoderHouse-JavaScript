@@ -1,0 +1,52 @@
+/*
+	RESET
+*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}
+body{line-height: 1; font-size: 18px; font-family: 'Noto Sans', sans-serif;}
+ol, ul{list-style: none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after{content: '';content: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+
+/*
+	GENERAL STYLES
+*/
+*{ -webkit-box-sizing: border-box;box-sizing: border-box}
+ul{list-style-type: none}
+a,
+a:hover{text-decoration: none;color: inherit}
+
+.flex{display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;}
+.hide{display: none;}
+
+.hero{background-image: url(../assets/car.jpg); height: 400px; background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; align-items: center;}
+.hero-container{padding: 2em; position: relative;}
+.hero span{color: #ff2f56f5;}
+.hero .overlay{position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #040202; opacity: 0.6;}
+.hero h1{font-size: 2.5em; color: white; letter-spacing: 0.13em; line-height: 1.5em;}
+
+.about{padding: 1.5em;text-align: center;}
+.about h2{padding-top: 2em; font-size: 1.5em; color:#f44336eb; font-weight: 600;}
+.about h3{padding-top: 2.5em; color: #888484; font-weight: 600; letter-spacing: 0.1em;}
+.about .about-information{padding: 1em;}
+.about button{background-color: #f44336e8; margin: 1em 3em 3em 3em; border: none; border-radius: 0.5em; padding: 0.5em 2em;}
+.about .about-send{position: relative; padding-top: 1em; margin-top: 1em;}
+.about .about-send button{font-size: 1em; color: white;letter-spacing: 0.1em;}
+.about .car-information,
+.about .person-information{display: flex; flex-direction: column; width: 50%;}
+.about input,
+.about select{width: 40%; margin: 0 auto; border-radius: 0.2em;  padding: 0.5em 0em; border: solid 0.1em #6d5f5f;}
+.about label{margin: 1em 0em 0.1em 0em; color: #101010e8;}
+.about .about-container{display: flex;}
+.about .parrafo-aviso{left: 50%; transform: translate(-50%, 0); top: 0; margin-top: 0; color: black; font-weight: 600; position: absolute; display: none;}
+
+
+.modal {display: none;  position: fixed;  z-index: 1;  left: 0; top: 0; width: 100%; height: 100%;  overflow: auto;  background-color: rgb(0,0,0);  background-color: rgba(0,0,0,0.4);}
+.modal-content {background-color: #f3f0f0; text-align: justify; padding: 2em; margin: 15% auto;  padding: 20px; border-radius: 0.2em; width: 50%; box-shadow: 0.5em 0.5em 0.5em 0.5em;}
+.modal-content p{padding: 0.5em 0em;}
+.modal-content .last-p{font-weight: 700; text-align: center; padding-top: 1em;}
+.modal-content .first-p{text-decoration: underline;color: #951c32;}
+.close { color: #aaa; float: right; font-size: 28px; font-weight: bold;}
+.close:hover,
+.close:focus {color: black;  text-decoration: none; cursor: pointer;}
