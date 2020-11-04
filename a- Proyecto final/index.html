@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="all"/>
+  <meta name="keywords" Content="">
+  <meta name="description" content="">
+  <meta name="author" content="Estefania Soldati">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <title> Cotizador de autos</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+      <!-- jQuery V3.3.1 -->
+  <script src="./scripts/jquery.min.js"></script>
+    <!-- Custom-Scripts -->
+  <script src="./scripts/scripts.js"></script>
+</head>
+<body>
+
+  <main>
+    <header class="header">
+      <div class="header-container">
+        <h3 class="header-h3">Sans <span class="header-span">seguros</span></h3>
+      </div>
+    </header>
+    <section class="hero flex">
+      <div class="overlay"></div>
+      <div class="hero-container">
+        <h1>Sans <span>seguros</span></h1>
+        <h2>Cotiza tu auto completando los siguientes pasos:</h2>
+      </div>
+    </section>
+    <section class="about">
+      <div class="about-container">
+      <div class="line-car">
+        <div><i class="icon-automobile car-one"></i></div>
+        <div class="line"></div>
+        <div><i class="icon-automobile car-two"></i></div>
+        <div class="line"></div>
+        <div><i class="icon-automobile car-three"></i></div>
+      </div>
+        <div class="car-information">
+          <h3>Acerca de tu auto</h3>
+          <div class="box-container">
+            <div class="label-container">
+              <label for="marca">Marca</label>
+            </div>
+            <select id="marca" class="marca required-1">
+              <option></option>
+            </select>
+          </div>
+          <div class="box-container"> 
+            <div class="label-container">        
+              <label for="modelo">Modelo</label>
+            </div>
+            <select id="modelo" class="modelo required-1">
+              <option></option>
+            </select>
+          </div>
+          <div class="box-container">
+            <div class="label-container">
+              <label for="anio">Año</label>
+            </div> 
+            <select id="anio" class="anio required-1">
+              <option></option>
+            </select>
+          </div> 
+          <div class="box-container">
+            <div class="label-container"> 
+              <label for="puertas">Puertas</label>
+            </div>
+            <select id="puertas" class="puertas required-1">
+              <option></option>
+              <option value="3">2</option>
+              <option value="4">4</option>
+            </select>
+          <div class="about-send">
+            <p id="parrafo-aviso" class="parrafo-aviso"></p>
+            <button id="myBtn" class="about-button-cotizador button-siguiente animated">siguiente</button>
+          </div> 
+          </div>
+      </div>
+        
+        <div class="person-information">
+          <h3>Acerca del dueño del auto</h3> 
+          <div class="box-container">
+            <div class="label-container">
+              <label for="nombre-apellido" class="label-large">Nombre y apellido</label>
+            </div> 
+            <input type="text" placeholder="" id="nombre-apellido" class="required-2">
+          </div>
+          <div class="box-container">
+            <div class="label-container">
+              <label for="nacimiento" class="label-large">Fecha de nacimiento</label>
+            </div>   
+            <input type="date" name="fecha" class="required-2">
+          </div>
+          <div class="box-container"> 
+            <div class="label-container">
+              <label for="puertas" class="label-large">País de residencia</label>
+            </div> 
+            <select id="pais-residencia" class="pais-residencia required-2">
+              <option></option>
+              <option value="Argentina">Argentina</option>
+              <option value="Brasil">Brasil</option>
+              <option value="Chile">Chile</option>
+              <option value="Uruguay">Uruguay</option>
+            </select>
+          </div>
+          <div class="box-container">
+            <div class="label-container">
+              <label for="ciudad">Ciudad</label> 
+            </div>
+            <input type="text" placeholder=""  id="ciudad" class="required-2">
+          </div>
+          <div class="box-container">
+            <div class="label-container">
+              <label for="telefono">Teléfono</label>
+            </div>
+            <input type="number" placeholder="" id="telefono" class="required-2">
+          </div>
+          <div class="box-container">
+            <div class="label-container"> 
+              <label for="mail">Mail</label>
+            </div>
+            <input type="text" id="mail" class="required-2"> 
+          </div>
+          <div class="about-send">
+            <p id="parrafo-aviso" class="parrafo-aviso"></p>
+            <button id="myBtn" class="about-button-cotizador button-cotizar animated">Cotizar</button>
+          </div> 
+        </div>
+        <div class="modal-content">
+          <p class="first-p">Los datos ingresados son:</p>
+          <p>Marca: <span id="marca-modal"></span></p>
+          <p>Modelo: <span id="modelo-modal"></span></p>
+          <p>Año: <span id="year-modal"></span></p>
+          <p>Puertas: <span id="puerta-modal"></span></p>
+          <p>Cotización: <span id="precio-modal"></span></p>
+          <p class="last-p">Muchas gracias <span id="nombre-modal"></span> por cotizar tu auto con nosotros, pronto nos comunicaremos con usted para brindarle mayor información.</p>
+          <div class="modal-button">
+            <button class="button-recotizar animated">Volver a cotizar</button>
+          </div> 
+        </div>     
+      </div>
+    </section>
+    <footer>
+      <div class="line-footer"></div>
+      <div class="container">
+        <div class="footer-box">
+          <a href="tel:+541182649972">
+            <i class="icon-phone"></i>
+            <h3>Contactate con nosotros al 0800-sans</h3>
+          </a>
+        </div>
+        <div class="footer-box">
+          <a href="mailto:sans@sans.com">
+            <i class="icon-mail"></i>
+            <h3>Escrinos un e-mail a: sans@sans.com</h3>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
